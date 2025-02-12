@@ -160,6 +160,7 @@ v_t = \beta_2v_{t-1} + (1-\beta_2)g_t^2
 
 ## Использованные источники
 - https://sky.pro/wiki/python/svertochnye-nejronnye-seti-cnn-chto-eto-i-kak-oni-rabotayut/
+- https://education.yandex.ru/handbook/ml/article/svyortochnye-nejroseti
 - https://habr.com/ru/articles/302242/
 - https://ru.linux-console.net/?p=34027
 - https://arxiv.org/pdf/2204.00825v1
