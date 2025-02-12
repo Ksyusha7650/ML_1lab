@@ -20,34 +20,37 @@
 
 ---
 
-## Архитектура сети Inception v3 строится постепенно, шаг за шагом, как описано ниже:
+### Архитектура сети Inception v3 строится постепенно, шаг за шагом, как описано ниже:
 
-1. Факторизованные свертки, что помогает снизить эффективность вычислений, поскольку уменьшает количество параметров, участвующих в сети. Он также контролирует эффективность сети.
+1. **Факторизованные свертки**, что помогает снизить эффективность вычислений, поскольку уменьшает количество параметров, участвующих в сети. Он также контролирует эффективность сети.
 
-2. Меньшие извилины: замена больших извилин меньшими определенно приводит к более быстрому обучению. Скажем, фильтр 5 × 5 имеет 25 параметров; два фильтра 3×3, заменяющие свертку 5×5, вместо этого имеют только 18 (3*3 + 3*3) параметров.
+2. **Меньшие извилины**: замена больших извилин меньшими определенно приводит к более быстрому обучению. Скажем, фильтр 5 × 5 имеет 25 параметров; два фильтра 3×3, заменяющие свертку 5×5, вместо этого имеют только 18 (3*3 + 3*3) параметров.
 
-![](https://ru.linux-console.net/common-images/popular-deep-learning-architectures-resnet-inceptionv3-squeezenet/aUr-1L-cLAjz_rv6uOTxDD77ezXUJ9Brbf_4-wdKE-FztMeH-oYr2Y_-zV49i2Ty1dk33qOJuj8PSXiUvvJrCVA6dHeV1HW_Xb9iQyh5oPiUAd1Y-z01jCWp)
+![image](https://github.com/user-attachments/assets/1bc3f996-09fb-436a-90da-e591a2455f97)
 
 В середине мы видим свертку 3х3, а ниже — полносвязный слой. Поскольку обе свертки 3x3 могут разделять между собой веса, количество вычислений можно уменьшить.
 
-3. Асимметричные свертки: Свертку 3 × 3 можно заменить сверткой 1 × 3, за которой следует свертка 3 × 1. Если свертку 3 × 3 заменить сверткой 2 × 2, количество параметров будет немного больше, чем предложенная асимметричная свертка.
+3. **Асимметричные свертки**: Свертку 3 × 3 можно заменить сверткой 1 × 3, за которой следует свертка 3 × 1. Если свертку 3 × 3 заменить сверткой 2 × 2, количество параметров будет немного больше, чем предложенная асимметричная свертка.
 
 ![](https://ru.linux-console.net/common-images/popular-deep-learning-architectures-resnet-inceptionv3-squeezenet/image-8.png)
 
-4. Вспомогательный классификатор: вспомогательный классификатор представляет собой небольшую CNN, вставленную между слоями во время обучения, и возникающие потери добавляются к основным потерям сети. В GoogLeNet вспомогательные классификаторы использовались для более глубокой сети, тогда как в Inception v3 вспомогательный классификатор действует как регуляризатор.
+4. **Вспомогательный классификатор**: вспомогательный классификатор представляет собой небольшую CNN, вставленную между слоями во время обучения, и возникающие потери добавляются к основным потерям сети. В GoogLeNet вспомогательные классификаторы использовались для более глубокой сети, тогда как в Inception v3 вспомогательный классификатор действует как регуляризатор.
 
-![](https://ru.linux-console.net/common-images/popular-deep-learning-architectures-resnet-inceptionv3-squeezenet/fGeYgLGnVzpmjMirbfVDkjpfwOX4wjCXEZc2YNmjrs8o24nzCmhO_OlejGpbEEzE9AlyZsJyc03iIfyHkSbvjbnAJMk1Q4cUqzy9KGCYyE8qyqq-Y8Z7xr_w)
+![image](https://github.com/user-attachments/assets/b0e2ce2d-bd16-4c71-89cc-5cb25171c360)
 
-5. Уменьшение размера сетки: Уменьшение размера сетки обычно выполняется путем объединения операций. Однако для борьбы с узкими местами вычислительных затрат предлагается более эффективный метод:
+5. **Уменьшение размера сетки**: Уменьшение размера сетки обычно выполняется путем объединения операций. Однако для борьбы с узкими местами вычислительных затрат предлагается более эффективный метод:
 
-![](https://ru.linux-console.net/common-images/popular-deep-learning-architectures-resnet-inceptionv3-squeezenet/MCqdi4PPKaYV43T4mm0yS6tu1XqjM0wWfqtplEe7GSKkPBAQ0L8wZmGd9nVmYxSrn4uDAAO0WhqVjUUYEJGUiz68y-A52RsMWcy8Y58IIywrJbmcSFgwn7YU)
+![image](https://github.com/user-attachments/assets/1163ec8d-97fe-40e7-800f-639fab8ba544)
+
 Все вышеперечисленные концепции объединены в окончательную архитектуру.
-![](https://ru.linux-console.net/common-images/popular-deep-learning-architectures-resnet-inceptionv3-squeezenet/jUYIO5_eq0hUmiBNbagOFb84C8Y9GxeedGUYNd-LIbhAlpW-1o8xSeNypMnbD6p-XsrAQvup3FeWXrAoZig7l7Y9WIK3uDHooEMEKiNNQ2qt0PfA4Zfsyltn)
+![image](https://github.com/user-attachments/assets/b692b56f-369e-4d14-9203-8f773c595b6f)
 
-## Обучение и результаты Inception v3
+
+### Обучение и результаты Inception v3
 Inception v3 был обучен на ImageNet и сравнен с другими современными моделями, как показано ниже.
 
-![](https://ru.linux-console.net/common-images/popular-deep-learning-architectures-resnet-inceptionv3-squeezenet/Y7GF27r8Iu-d0DmhAWKR_b_MCRP0mN9hx-oEGuxrlJup9W2NpoyofrcRgTEFG_DYamlNtXeEL5lHibW7N9NQXd4uP7ql-PLgtn1fmaJJ98bBTUEqxGYLf9bZ)
+![image](https://github.com/user-attachments/assets/776cb93e-c883-433b-a221-6cd4768f4d19)
+
 
 Как показано в таблице, при дополнении вспомогательным классификатором, факторизацией сверток, RMSProp и сглаживанием меток Inception v3 может достичь самого низкого уровня ошибок по сравнению со своими современниками.
 
@@ -120,6 +123,7 @@ v_t = \beta_2v_{t-1} + (1-\beta_2)g_t^2
 
 ## Использованные источники
 - https://habr.com/ru/articles/302242/
+- https://ru.linux-console.net/?p=34027
 - https://arxiv.org/pdf/2204.00825v1
 
 ---
