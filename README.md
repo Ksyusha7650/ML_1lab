@@ -16,7 +16,7 @@
 **1. Введение**
 **InceptionV3** — сверточная нейросеть для классификации изображений, представленная в статье *"Rethinking the Inception Architecture for Computer Vision" (Szegedy et al., 2016)*. Улучшает точность за счет факторизации сверток и оптимизации вычислений.
 
-![InceptionV3 Архитектура](https://raw.githubusercontent.com/shrikrishna31415/InceptionV3/master/inceptionv3_architecture.png)  
+![InceptionV3 Архитектура](https://habrastorage.org/r/w1560/files/84d/8a8/0a2/84d8a80a299e440c9f1892485c2e0803.png)  
 
 ---
 
@@ -117,7 +117,7 @@ v_t = \beta_2v_{t-1} + (1-\beta_2)g_t^2
 ---
 
 ## Использованные источники
-- 
+- https://habr.com/ru/articles/302242/
 - https://arxiv.org/pdf/2204.00825v1
 
 ---
