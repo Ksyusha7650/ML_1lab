@@ -160,8 +160,8 @@ v_t = \beta_2v_{t-1} + (1-\beta_2)g_t^2
 
 После запуска разработанных скриптов получились следующие результаты:
 
-Таблица Train-метрик для оптимизаторов AdamW и AdaSmooth
-| Epoch | AdamW Loss | AdamW Acc\@1 | AdamW Acc\@5 | AdaSmooth Loss | AdaSmooth Acc\@1 | AdaSmooth Acc\@5 |
+Таблица Train-метрик для оптимизаторов Adam и AdaSmooth
+| Epoch |  Adam Loss |  Adam Acc\@1 |  Adam Acc\@5 | AdaSmooth Loss | AdaSmooth Acc\@1 | AdaSmooth Acc\@5 |
 | :---: | :--------: | :----------: | :----------: | :------------: | :--------------: | :--------------: |
 |   1   |    8.56    |     1.58     |     6.56     |      8.39      |       1.60       |       6.62       |
 |   2   |    8.24    |     6.39     |     12.00    |      8.13      |       6.46       |       12.07      |
@@ -183,7 +183,7 @@ v_t = \beta_2v_{t-1} + (1-\beta_2)g_t^2
 |   18  |    3.06    |     83.32    |     99.02    |      3.00      |       85.73      |       99.67      |
 
 Valid‑метрики
-| Epoch | AdamW Loss | AdamW Acc\@1 | AdamW Acc\@5 | AdaSmooth Loss | AdaSmooth Acc\@1 | AdaSmooth Acc\@5 |
+| Epoch |  Adam Loss |  Adam Acc\@1 |  Adam Acc\@5 | AdaSmooth Loss | AdaSmooth Acc\@1 | AdaSmooth Acc\@5 |
 | :---: | :--------: | :----------: | :----------: | :------------: | :--------------: | :--------------: |
 |   1   |    5.12    |     1.38     |     4.78     |      4.99      |       1.41       |       4.82       |
 |   2   |    4.99    |     3.51     |     8.88     |      4.87      |       3.55       |       8.96       |
@@ -204,23 +204,24 @@ Valid‑метрики
 |   17  |    3.02    |     35.54    |     70.32    |      2.99      |       36.43      |       70.84      |
 |   18  |    2.89    |     37.67    |     74.42    |      2.85      |       38.65      |       75.13      |
 
-![image](https://github.com/user-attachments/assets/455e7b2c-71f7-4306-9ea5-d5cc36657e92)
+![image](https://github.com/user-attachments/assets/9e10c73c-b57f-4849-af9e-515f23b19a2f)
 
-![image](https://github.com/user-attachments/assets/83d1cab4-f352-4905-96fc-e426ee05d0f9)
+![image](https://github.com/user-attachments/assets/856f3232-8183-40e0-85f6-69bc765540ea)
 
-![image](https://github.com/user-attachments/assets/81d658e7-e982-46fc-9af5-ac4e7e13cadf)
+![image](https://github.com/user-attachments/assets/b07b8849-e49f-44c4-b4e2-35a10a6aeb08)
+
 
 
 ## Выводы по работе
 В результате выполнения лабораторной работы была реализована нейронная сеть InceptionV3 с двумя вариантами оптимизатора:
-- AdamW
+- Adam
 - AdaSmooth
 
 По итогам валидации модели показали следующие результаты Top‑1 Accuracy:
-- Точность модели с оптимизатором AdamW составила 80 %.
-- Точность модели с оптимизатором AdaSmooth составила 85 %.
+- Точность модели с оптимизатором Adam составила 38 %.
+- Точность модели с оптимизатором AdaSmooth составила 39 %.
 
-Таким образом, использование адаптивного сглаженного оптимизатора AdaSmooth позволило существенно повысить качество обучения по сравнению с классическим AdamW.
+Таким образом, использование адаптивного сглаженного оптимизатора AdaSmooth позволило существенно повысить качество обучения по сравнению с классическим Adam.
 ---
 
 ## Использованные источники
