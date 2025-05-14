@@ -204,12 +204,11 @@ Valid‑метрики
 |   17  |    3.02    |     35.54    |     70.32    |      2.99      |       36.43      |       70.84      |
 |   18  |    2.89    |     37.67    |     74.42    |      2.85      |       38.65      |       75.13      |
 
-![image](https://github.com/user-attachments/assets/9e10c73c-b57f-4849-af9e-515f23b19a2f)
+![image](https://github.com/user-attachments/assets/91d6a6ee-ac52-4c0b-a64e-8eef95f8a08a)
 
-![image](https://github.com/user-attachments/assets/856f3232-8183-40e0-85f6-69bc765540ea)
+![image](https://github.com/user-attachments/assets/eef9b867-e10f-481d-ae26-853c82211522)
 
-![image](https://github.com/user-attachments/assets/b07b8849-e49f-44c4-b4e2-35a10a6aeb08)
-
+![image](https://github.com/user-attachments/assets/b4f172b9-0d23-4559-b4c0-3d942955bf4e)
 
 
 ## Выводы по работе
